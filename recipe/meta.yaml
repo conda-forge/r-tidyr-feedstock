@@ -1,4 +1,4 @@
-{% set version = '0.6.1' %}
+{% set version = '0.7.1' %}
 
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
@@ -12,7 +12,7 @@ source:
   url:
     - https://cran.r-project.org/src/contrib/tidyr_{{ version }}.tar.gz
     - https://cran.r-project.org/src/contrib/Archive/tidyr/tidyr_{{ version }}.tar.gz
-  sha256: 2708f92dbfc250d0b4f48b5fd755e991a462933c95681590e083ab75f11b1a86
+  sha256: b9c2430c72fe66c65a6aa83d835d3ea333ab09391c58ae0d57fd98e45088d1a1
 
 build:
   number: 0
@@ -30,6 +30,8 @@ requirements:
     - r-magrittr
     - r-stringi
     - r-tibble
+    - r-purrr
+    - r-tidyselect
     - posix                # [win]
     - {{native}}toolchain  # [win]
     - gcc                  # [not win]
@@ -42,6 +44,8 @@ requirements:
     - r-magrittr
     - r-stringi
     - r-tibble
+    - r-purrr
+    - r-tidyselect
     - libgcc  # [not win]
 
 test:
