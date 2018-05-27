@@ -14,14 +14,16 @@ Summary: An evolution of 'reshape2'. It's designed specifically for data tidying
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/r-tidyr-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/r-tidyr-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/r-tidyr-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/r-tidyr-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/r-tidyr-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/r-tidyr-feedstock/branch/master)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/r-tidyr-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/r-tidyr-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/r-tidyr-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/r-tidyr-feedstock)
+[![Windows](https://img.shields.io/appveyor/ci/conda-forge/r-tidyr-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/r-tidyr-feedstock/branch/master)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/r-tidyr/badges/version.svg)](https://anaconda.org/conda-forge/r-tidyr)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/r-tidyr/badges/downloads.svg)](https://anaconda.org/conda-forge/r-tidyr)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-r--tidyr-green.svg)](https://anaconda.org/conda-forge/r-tidyr) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/r-tidyr.svg)](https://anaconda.org/conda-forge/r-tidyr) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/r-tidyr.svg)](https://anaconda.org/conda-forge/r-tidyr) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/r-tidyr.svg)](https://anaconda.org/conda-forge/r-tidyr) |
 
 Installing r-tidyr
 ==================

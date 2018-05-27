@@ -1,4 +1,4 @@
-{% set version = '0.8.0' %}
+{% set version = "0.8.1" %}
 
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
@@ -12,7 +12,7 @@ source:
   url:
     - https://cran.r-project.org/src/contrib/tidyr_{{ version }}.tar.gz
     - https://cran.r-project.org/src/contrib/Archive/tidyr/tidyr_{{ version }}.tar.gz
-  sha256: 0b7fb3e4ee7c6c8bb9894825c7f16db967abb57aceac0609b7866fa1825c57e2
+  sha256: 3d3e2821c3eb711b5eebe26b880e6acfe5444d5dc69fb21761f4cd5953700511
 
 build:
   number: 0
