@@ -1,5 +1,4 @@
-{% set version = "0.8.1" %}
-
+{% set version = '0.8.1' %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,8 +9,8 @@ package:
 source:
   fn: tidyr_{{ version }}.tar.gz
   url:
-    - https://cran.r-project.org/src/contrib/tidyr_{{ version }}.tar.gz
-    - https://cran.r-project.org/src/contrib/Archive/tidyr/tidyr_{{ version }}.tar.gz
+    - {{ cran_mirror }}/src/contrib/tidyr_{{ version }}.tar.gz
+    - {{ cran_mirror }}/src/contrib/Archive/tidyr/tidyr_{{ version }}.tar.gz
   sha256: 3d3e2821c3eb711b5eebe26b880e6acfe5444d5dc69fb21761f4cd5953700511
 
 build:
@@ -24,11 +23,14 @@ build:
 
 requirements:
   build:
-    - posix                # [win]
-    - {{ compiler('c') }}        # [unix]
-    - {{ compiler('m2w64_c') }}  # [win]
-    - {{ compiler('cxx') }}        # [unix]
-    - {{ compiler('m2w64_cxx') }}  # [win]
+    - {{ compiler('c') }}        # [not win]
+    - {{ compiler('cxx') }}      # [not win]
+    - {{native}}toolchain        # [win]
+    - {{posix}}filesystem        # [win]
+    - {{posix}}make
+    - {{posix}}sed               # [win]
+    - {{posix}}coreutils         # [win]
+    - {{posix}}zip               # [win]
   host:
     - r-base
     - r-rcpp
@@ -40,9 +42,9 @@ requirements:
     - r-stringi
     - r-tibble
     - r-tidyselect
-
   run:
     - r-base
+    - {{native}}gcc-libs         # [win]
     - r-rcpp
     - r-dplyr >=0.7.0
     - r-glue
@@ -55,7 +57,7 @@ requirements:
 
 test:
   commands:
-    - $R -e "library('tidyr')"  # [not win]
+    - $R -e "library('tidyr')"           # [not win]
     - "\"%R%\" -e \"library('tidyr')\""  # [win]
 
 about:
@@ -67,8 +69,8 @@ about:
 
 extra:
   recipe-maintainers:
-    - cbrueffer
     - johanneskoester
     - bgruening
     - daler
     - jdblischak
+    - cbrueffer
