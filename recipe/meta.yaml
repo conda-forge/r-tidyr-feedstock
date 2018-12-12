@@ -11,7 +11,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/tidyr_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/tidyr/tidyr_{{ version }}.tar.gz
-  sha256: 3d3e2821c3eb711b5eebe26b880e6acfe5444d5dc69fb21761f4cd5953700511
+  sha256: 99a508d0539390364789c5f4835b36c4a383927f0ec1648e2a4636c1cc6e490f
 
 build:
   merge_build_host: True  # [win]
