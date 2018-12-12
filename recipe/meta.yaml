@@ -11,11 +11,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/tidyr_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/tidyr/tidyr_{{ version }}.tar.gz
-  sha256: 99a508d0539390364789c5f4835b36c4a383927f0ec1648e2a4636c1cc6e490f
+  sha256: 3d3e2821c3eb711b5eebe26b880e6acfe5444d5dc69fb21761f4cd5953700511
 
 build:
   merge_build_host: True  # [win]
-  number: 1002
+  number: 1000
   skip: true  # [win32]
   rpaths:
     - lib/R/lib/
@@ -33,27 +33,27 @@ requirements:
     - {{posix}}zip               # [win]
   host:
     - r-base
-    - r-rcpp
     - r-dplyr >=0.7.0
     - r-glue
     - r-magrittr
     - r-purrr
+    - r-rcpp
     - r-rlang
     - r-stringi
     - r-tibble
-    - r-tidyselect
+    - r-tidyselect >=0.2.5
   run:
     - r-base
     - {{native}}gcc-libs         # [win]
-    - r-rcpp
     - r-dplyr >=0.7.0
     - r-glue
     - r-magrittr
     - r-purrr
+    - r-rcpp
     - r-rlang
     - r-stringi
     - r-tibble
-    - r-tidyselect
+    - r-tidyselect >=0.2.5
 
 test:
   commands:
@@ -74,3 +74,4 @@ extra:
     - daler
     - jdblischak
     - cbrueffer
+    - philip-khor
