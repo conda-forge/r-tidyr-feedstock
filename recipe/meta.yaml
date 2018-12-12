@@ -15,7 +15,7 @@ source:
 
 build:
   merge_build_host: True  # [win]
-  number: 1002
+  number: 1000
   skip: true  # [win32]
   rpaths:
     - lib/R/lib/
@@ -33,27 +33,27 @@ requirements:
     - {{posix}}zip               # [win]
   host:
     - r-base
-    - r-rcpp
     - r-dplyr >=0.7.0
     - r-glue
     - r-magrittr
     - r-purrr
+    - r-rcpp
     - r-rlang
     - r-stringi
     - r-tibble
-    - r-tidyselect
+    - r-tidyselect >=0.2.5
   run:
     - r-base
     - {{native}}gcc-libs         # [win]
-    - r-rcpp
     - r-dplyr >=0.7.0
     - r-glue
     - r-magrittr
     - r-purrr
+    - r-rcpp
     - r-rlang
     - r-stringi
     - r-tibble
-    - r-tidyselect
+    - r-tidyselect >=0.2.5
 
 test:
   commands:
@@ -74,3 +74,4 @@ extra:
     - daler
     - jdblischak
     - cbrueffer
+    - philip-khor
