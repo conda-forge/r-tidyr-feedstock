@@ -1,13 +1,13 @@
 About r-tidyr
 =============
 
-Home: http://tidyr.tidyverse.org, https://github.com/tidyverse/tidyr
+Home: https://tidyr.tidyverse.org, https://github.com/tidyverse/tidyr
 
 Package license: MIT
 
 Feedstock license: BSD 3-Clause
 
-Summary: An evolution of 'reshape2'. It's designed specifically for data tidying (not general reshaping or aggregating) and works well with 'dplyr' data pipelines.
+Summary: Tools to help to create tidy data, where each column is a  variable, each row is an observation, and each cell contains a single value.   'tidyr' contains tools for changing the shape (pivoting) and hierarchy (nesting and 'unnesting') of a dataset, turning deeply nested lists into rectangular data frames ('rectangling'), and extracting values out  of string columns. It also includes tools for working with missing values  (both implicit and explicit).
 
 
 
@@ -76,7 +76,12 @@ Current build status
       </details>
     </td>
   </tr>
-![ppc64le disabled](https://img.shields.io/badge/ppc64le-disabled-lightgrey.svg)
+  <tr>
+    <td>Linux_ppc64le</td>
+    <td>
+      <img src="https://img.shields.io/badge/ppc64le-disabled-lightgrey.svg" alt="ppc64le disabled">
+    </td>
+  </tr>
 </table>
 
 Current release info
