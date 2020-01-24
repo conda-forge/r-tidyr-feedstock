@@ -1,4 +1,4 @@
-{% set version = '1.0.0' %}
+{% set version = "1.0.2" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/tidyr_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/tidyr/tidyr_{{ version }}.tar.gz
-  sha256: 92a1a30b5636c3c1c68acbff0c1f5b301df64bf3198d23f1c9808ed43a900390
+  sha256: 2403dd2f4d350d1ecb449be5d61cdccf6655572a807409325f9122c716924e69
 
 build:
   merge_build_host: True  # [win]
