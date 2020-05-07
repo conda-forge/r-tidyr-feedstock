@@ -1,4 +1,4 @@
-{% set version = "1.0.2" %}
+{% set version = "1.0.3" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/tidyr_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/tidyr/tidyr_{{ version }}.tar.gz
-  sha256: 2403dd2f4d350d1ecb449be5d61cdccf6655572a807409325f9122c716924e69
+  sha256: 54b97d3236b3975f244f85a9878222f6ecf613a900a1d48a94e5ba688799d7a3
 
 build:
-  merge_build_host: True  # [win]
-  number: 1
+  merge_build_host: true  # [win]
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
@@ -68,15 +68,11 @@ test:
 about:
   home: https://tidyr.tidyverse.org, https://github.com/tidyverse/tidyr
   license: MIT
-  summary: Tools to help to create tidy data, where each column is a  variable, each row is an
-    observation, and each cell contains a single value.   'tidyr' contains tools for
-    changing the shape (pivoting) and hierarchy (nesting and 'unnesting') of a dataset,
-    turning deeply nested lists into rectangular data frames ('rectangling'), and extracting
-    values out  of string columns. It also includes tools for working with missing values  (both
-    implicit and explicit).
+  summary: Tools to help to create tidy data, where each column is a  variable, each row is an observation, and each cell contains a single value.   'tidyr' contains tools for changing the shape (pivoting) and hierarchy (nesting and 'unnesting') of a dataset, turning deeply nested lists into rectangular data frames ('rectangling'),
+    and extracting values out  of string columns. It also includes tools for working with missing values  (both implicit and explicit).
   license_family: MIT
   license_file:
-    - '{{ environ["PREFIX"] }}/lib/R/share/licenses/MIT'
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/MIT
     - LICENSE
 
 extra:
