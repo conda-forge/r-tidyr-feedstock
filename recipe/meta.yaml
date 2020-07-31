@@ -45,7 +45,7 @@ requirements:
     - r-vctrs >=0.3.0
   run:
     - r-base
-    - {{native}}gcc-libs         # [win]
+    - {{ native }}gcc-libs         # [win]
     - r-cpp11
     - r-dplyr >=0.8.2
     - r-ellipsis >=0.1.0
