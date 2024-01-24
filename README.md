@@ -3,6 +3,7 @@ About r-tidyr-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-tidyr-feedstock/blob/main/LICENSE.txt)
 
+
 About r-tidyr
 -------------
 
@@ -11,6 +12,7 @@ Home: https://tidyr.tidyverse.org, https://github.com/tidyverse/tidyr
 Package license: MIT
 
 Summary: Tools to help to create tidy data, where each column is a  variable, each row is an observation, and each cell contains a single value.   'tidyr' contains tools for changing the shape (pivoting) and hierarchy (nesting and 'unnesting') of a dataset, turning deeply nested lists into rectangular data frames ('rectangling'), and extracting values out  of string columns. It also includes tools for working with missing values  (both implicit and explicit).
+
 About r-tidyr
 -------------
 
@@ -195,7 +197,7 @@ available continuous integration services. Thanks to the awesome service provide
 [CircleCI](https://circleci.com/), [AppVeyor](https://www.appveyor.com/),
 [Drone](https://cloud.drone.io/welcome), and [TravisCI](https://travis-ci.com/)
 it is possible to build and upload installable packages to the
-[conda-forge](https://anaconda.org/conda-forge) [Anaconda-Cloud](https://anaconda.org/)
+[conda-forge](https://anaconda.org/conda-forge) [anaconda.org](https://anaconda.org/)
 channel for Linux, Windows and OSX respectively.
 
 To manage the continuous integration and simplify feedstock maintenance
